@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <button onclick="update();" class="js-start">Start</button>
+  </body>
+  <script>
+    function update(){
+    const btn=document.querySelector('.js-start');
+    let startbtn=btn.innerHTML;
+    if(startbtn == 'Start'){
+      btn.innerHTML = 'Loading..';
+    }
+    setTimeout(function(){
+      btn.innerHTML = 'Finish!';
+    }, 5000);
+  }
+  </script>
+</html>

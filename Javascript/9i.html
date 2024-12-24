@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+</head>
+<body>
+    <!--<button onclick="showQuantity()">Show Quantity</button>-->
+    <button onclick="addToCart()">Add to Cart</button>
+    <button onclick="addTwo()">+2</button>
+    <button onclick="addThree()">+3</button>
+    <button onclick="minustwo()">-2</button>
+    <button onclick="minusthree()">-3</button>
+    <button onclick="resetCart()">Reset Cart</button>
+    <p>Cart Quantity: <span id="cart-quantity">0</span></p>
+
+    <script>
+        let cartquantity = 0;
+
+        // function showQuantity() {
+        //     document.getElementById('cart-quantity').innerText = cartquantity;
+        // }
+
+        function addToCart() {
+            cartquantity += 1;
+            document.getElementById('cart-quantity').innerText = cartquantity;
+        }
+
+        function addTwo() {
+            cartquantity += 2;
+            document.getElementById('cart-quantity').innerText = cartquantity;
+        }
+
+        function addThree() {
+            cartquantity += 3;
+            document.getElementById('cart-quantity').innerText = cartquantity;
+        }
+        function minustwo(){
+          cartquantity-=2;
+          document.getElementById('cart-quantity').innerText = cartquantity;
+        }
+        function minusthree(){
+          cartquantity-=2;
+          document.getElementById('cart-quantity').innerText = cartquantity;
+        }
+        function resetCart() {
+            cartquantity = 0;
+            document.getElementById('cart-quantity').innerText = cartquantity;
+        }
+    </script>
+</body>
+</html>

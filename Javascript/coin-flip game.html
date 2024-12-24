@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head></head>
+<body></body>
+<script>
+
+  let r=Math.random();
+  let guess=prompt("Your choice:").toLowerCase();
+  let result='';
+  if(r <0.5){
+    result='heads';
+  }
+  else{
+    result='tails'
+  }
+  let score = 
+            JSON.parse(localStorage.getItem('Score')) || {wins:0, losses:0};
+  if(guess === result){
+    console.log(`You Win! because you choose ${guess} and computer choose ${result}`);
+    score.wins += 1;
+  }
+  else{
+    console.log(`You loose because you choose ${guess} and computer choose ${result}`);
+    score.losses +=1;
+  }
+  localStorage.setItem('Score',JSON.stringify(score));
+
+  console.log(`Wins: ${score.wins} and ${score.losses}`);
+</script>

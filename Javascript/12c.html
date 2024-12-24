@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <button onclick="finish();" class="js-btn">Start</button>
+  </body>
+  <script>
+  function finish() {
+    let btn = document.querySelector('.js-btn');
+    let startbtn = btn.innerHTML;
+    if (startbtn == 'Start') {
+      btn.innerHTML = 'Loading...';
+    }
+
+  setTimeout(finish, 8000);
+  }
+ // Delay of 8000 milliseconds (8 seconds)
+  </script>
+</html>

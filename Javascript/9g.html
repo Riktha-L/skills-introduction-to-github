@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <input placeholder="Cost" class="js-input" onkeydown="cal(event);">
+    <button onclick="calculate();">Calculate</button>
+  </body>
+  <script>
+     function calculate(){
+     let val=document.querySelector('.js-input');
+    let cost=val.value;
+    console.log(cost);
+     }
+    function cal(event){
+      let val=document.querySelector('.js-input');
+    let cost=val.value;
+    if(event.key === 'Enter'){
+      console.log(cost);
+    }
+    }
+  </script>
+</html>

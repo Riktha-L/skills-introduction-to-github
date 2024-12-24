@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <button onclick="add();" class="js-add">
+      Add to cart
+    </button>
+    <p class="js-message"></p>
+  </body>
+  <script>
+    function add() {
+      const btn=document.querySelector('.js-add');
+      let addbtn=btn.innerHTML.trim();
+      if(addbtn == 'Add to cart') {
+        document.querySelector('.js-message').innerHTML= 'Added';
+      }
+    }
+  </script>
+</html>

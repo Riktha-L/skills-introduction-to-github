@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input placeholder="Name" class="js-input" onkeydown="handlekey(event);">
+    <button class ='js-btn'onclick="
+    inputvalue();
+    ">Submit</button>
+    <p class="js-ot"></p>
+  </body>
+
+  <script>
+    function inputvalue(){
+      let inputelement = document.querySelector('.js-input');
+      let inputvalue = inputelement.value;
+    //console.log(inputvalue);
+    document.querySelector('.js-ot').innerHTML = 'Your name :' + inputvalue;
+    }
+
+    function handlekey(event){
+      if(event.key==='Enter'){
+        inputvalue();
+      }
+      console.log(event.key);
+    }
+  </script>
+</html>
