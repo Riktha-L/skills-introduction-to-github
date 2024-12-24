@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple expense Tracker</title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+    let expense={
+      description:'Lunch',
+      cost:10
+    };
+    function addexpense(description, cost) {
+      expense.description = description;
+      expense.cost = cost;
+      return expense;
+    }
+    console.log(addexpense('Dinner',90));
+    
+  </script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors</title>
+</head>
+<style>
+  body {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: Arial;
+  }
+  .title {
+    font-size: larger;
+    font-weight: bold;
+  }
+  .move-icon {
+    height: 50px !important;
+  }
+  .move-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  .result {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+  .score {
+    margin-top: 60px;
+  }
+  .reset-btn-score {
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+  .auto-btn{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+</style>
+<body>
+    <p class="title">Rock Paper Scissors</p>
+    <button onclick="play('Rock')" class="move-btn"><img src="images/rock-emoji.png" class="move-icon" alt="Rock"></button>
+    <button onclick="play('Paper')" class="move-btn"><img src="images/paper-emoji.png" class="move-icon" alt="Paper"></button>
+    <button onclick="play('Scissors')" class="move-btn"><img src="images/scissors-emoji.png" class="move-icon" alt="Scissors"></button>
+    <p class="js-result result"></p>
+    <p class="js-move you"></p>
+    <div><p class="js-score score"></p></div>
+    <button onclick="
+    localStorage.removeItem('Score');
+    resetScore();
+    updateScoreElement();" class="reset-btn-score">Reset</button>
+    <button class="auto-btn" onclick="
+    autoplay();
+    ">Auto Play</button>
+
+    <script src="Scripts/12-rock-paper-scissors copy.js"></script>
+</body>
+</html>
